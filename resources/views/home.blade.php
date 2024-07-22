@@ -16,7 +16,7 @@
                     <h3 class="text-xl font-bold">{{ $project->title }}</h3>
                     <p>{{ $project->description }}</p>
                     @if ($project->images->count() > 0)
-                        <img src="{{ asset($project->images->first()->image_path) }}" alt="{{ $project->title }}" class="w-full h-48 object-cover mt-2">
+                        <img src="{{ asset('storage/' . $project->images->first()->image_path) }}" alt="{{ $project->title }}" class="w-full h-48 object-cover mt-2">
                     @endif
                     <div class="mt-2 flex flex-wrap">
                         @foreach ($project->stacks as $stack)

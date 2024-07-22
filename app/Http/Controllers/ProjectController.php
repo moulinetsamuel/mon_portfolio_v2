@@ -12,7 +12,7 @@ class ProjectController extends Controller
     public function index()
     {
         // Récupérer tous les projets avec leurs images et leurs stacks
-        $projetcs = Project::with('images', 'stacks')->get();
+        $projects = Project::with('images', 'stacks')->get();
         return view('projects.index', compact('projects'));
 
     }
@@ -101,4 +101,6 @@ class ProjectController extends Controller
         // Rediriger vers la liste des projets avec un message de succès
         return redirect()->route('projects.index')->with('success', 'Projet supprimé avec succès.');
     }
+
+
 }
