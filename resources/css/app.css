@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+    color: #1a202c;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+section#introduction {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 0;
+}
+
+section#projects {
+    background: #f7fafc;
+}
+
+section#skills {
+    background: #edf2f7;
+}
+
+footer {
+    background: #2d3748;
+    color: white;
+    padding: 1rem 0;
+}
