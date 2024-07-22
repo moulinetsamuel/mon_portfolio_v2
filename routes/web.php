@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('projects', ProjectController::class);
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
